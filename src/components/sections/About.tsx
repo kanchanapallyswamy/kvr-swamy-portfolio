@@ -8,7 +8,7 @@ const About = () => {
       degree: "B.Tech, Information Technology",
       institution: "Sreenidhi Institute of Science and Technology",
       period: "2022–2026",
-      score: "CGPA: 9.3/10",
+      score: "CGPA: 9.0/10",
     },
     {
       degree: "Intermediate",
@@ -35,9 +35,6 @@ const About = () => {
           <span className="bg-portfolio-lightBlue text-portfolio-blue px-4 py-1 rounded-full text-sm font-medium mb-4">
             About Me
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-portfolio-dark to-portfolio-blue/80 bg-clip-text text-transparent">
-            Who I Am
-          </h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
