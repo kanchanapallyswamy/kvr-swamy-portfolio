@@ -39,7 +39,7 @@ const Hero = () => {
                 className="bg-portfolio-orange hover:bg-portfolio-darkBlue transition-all duration-300 shadow-lg hover:shadow-portfolio-blue/20 hover:-translate-y-1"
                 asChild
               >
-                <a href="/resume.pdf" download>
+                <a href="https://drive.google.com/uc?export=download&id=1KMeUav07FP31BLN3ZoQNnGCLOxPc1obj" target="_blank" rel="noopener noreferrer">
                   <Download size={18} className="mr-1" /> Download Resume
                 </a>
               </Button>
@@ -79,10 +79,10 @@ const Hero = () => {
               </div>
               
               <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-full shadow-lg">
-                <div className="bg-portfolio-orange h-16 w-16 rounded-full flex items-center justify-center text-white font-bold text-lg animate-pulse">
-                  600+
-                  <span className="text-xs absolute bottom-2.5">Problems</span>
-                </div>
+                 <div className="bg-portfolio-orange h-16 w-16 rounded-full flex items-center justify-center text-white font-bold text-lg animate-pulse">
+                   700+
+                   <span className="text-xs absolute bottom-2.5">Problems</span>
+                 </div>
               </div>
             </div>
           </div>
