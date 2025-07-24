@@ -5,21 +5,21 @@ import { Card, CardContent } from "@/components/ui/card";
 const About = () => {
   const education = [
     {
-      degree: "B.Tech, Information Technology",
+      degree: "B.Tech in Information Technology",
       institution: "Sreenidhi Institute of Science and Technology",
       period: "2022–2026",
-      score: "CGPA: 9.0/10",
+      score: "CGPA: 8.97/10",
     },
     {
-      degree: "Intermediate",
-      institution: "Pranava Junior College",
+      degree: "Intermediate (MPC)",
+      institution: "Pranava Junior College, Bhongir",
       period: "2020–2022",
-      score: "97.9%",
+      score: "Score: 979/1000",
     },
     {
       degree: "Secondary School",
-      institution: "KPR Gowtham School",
-      period: "",
+      institution: "KPR Gowtham School, Sathupally",
+      period: "2019–2020",
       score: "GPA: 10/10",
     },
   ];
@@ -44,10 +44,12 @@ const About = () => {
               <div className="ml-6">
                 <h3 className="text-2xl font-bold mb-6 text-portfolio-dark">Personal Bio</h3>
                 <p className="text-lg text-portfolio-gray mb-6 leading-relaxed">
-                  I'm a B.Tech student from Sreenidhi Institute of Science and Technology, majoring in Information Technology. I'm driven by a deep curiosity for system efficiency and love building performance-focused projects using Java, C, and Python.
+                  Dynamic Software Developer with expertise in Java, Python, and C, specializing in Data Structures & Algorithms (DSA). 
+                  Proven track record of solving 700+ problems on LeetCode and participating in 35+ coding contests.
                 </p>
                 <p className="text-lg text-portfolio-gray leading-relaxed">
-                  My passion lies in mastering Data Structures & Algorithms, which I believe are the foundation for creating efficient and scalable software solutions. I enjoy solving complex problems and continuously challenging myself through coding platforms like LeetCode and CodeChef.
+                  Passionate about building high-performance applications, optimizing system efficiency, and leveraging algorithmic expertise to solve complex problems. 
+                  Achieved a LeetCode Contest Rating of 1600 with consistent contest participation.
                 </p>
               </div>
             </div>

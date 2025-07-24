@@ -6,30 +6,19 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["C", "Java", "Python", "SQL"],
+      skills: ["C", "Java", "Python", "Data Structures"],
     },
     {
       title: "Web Technologies",
       skills: ["HTML", "CSS"],
     },
     {
-      title: "Tools & Databases",
+      title: "Databases & Tools",
       skills: ["MySQL", "GitHub"],
     },
     {
-      title: "DSA Knowledge",
-      skills: [
-        "Arrays & Strings",
-        "Linked Lists",
-        "Stacks & Queues",
-        "Trees & Graphs",
-        "Hash Tables",
-        "Heaps",
-        "Dynamic Programming",
-        "Greedy Algorithms",
-        "Sieve's Algorithm",
-        "Sorting Algorithms",
-      ],
+      title: "Certifications",
+      skills: ["NPTEL Java Programming", "NPTEL Python Programming"],
     },
   ];
 
@@ -41,14 +30,20 @@ const Skills = () => {
     },
     {
       platform: "CodeChef",
-      username: "kvr_swamy",
+      username: "kvr_swamy", 
       url: "https://codechef.com/users/kvr_swamy",
+    },
+    {
+      platform: "MentorPick",
+      username: "22311a12f6-swamy",
+      url: "https://mentorpick.com/profile/22311a12f6-swamy",
     },
   ];
 
   const codingStats = [
-    { name: "LeetCode Problems", value: 600, percentage: 75 },
-    { name: "Coding Contests", value: 35, percentage: 65 },
+    { name: "LeetCode Problems", value: 700, percentage: 85 },
+    { name: "LeetCode Contests", value: 30, percentage: 70 },
+    { name: "CodeChef Contests", value: 25, percentage: 65 },
     { name: "Longest Streak", value: 53, percentage: 90 },
   ];
 

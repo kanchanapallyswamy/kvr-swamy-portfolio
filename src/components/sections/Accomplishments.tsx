@@ -6,28 +6,38 @@ const Accomplishments = () => {
   const accomplishments = [
     {
       id: 1,
-      text: "Solved 600+ problems on LeetCode",
+      text: "Solved 700+ problems on LeetCode, ranking in the top percentile for problem-solving",
       icon: <CheckCircle className="text-portfolio-blue" size={20} />,
     },
     {
       id: 2,
-      text: "53-day coding streak on LeetCode",
+      text: "Maintained a 53-day streak of continuous problem-solving on LeetCode",
       icon: <Calendar className="text-portfolio-blue" size={20} />,
     },
     {
       id: 3,
-      text: "Participated in 30+ contests (LeetCode) and 25+ (CodeChef)",
+      text: "Completed 30+ LeetCode contests demonstrating algorithmic expertise",
       icon: <Award className="text-portfolio-blue" size={20} />,
     },
     {
       id: 4,
-      text: "Ranked Top 10 out of 155 in Being Zero training",
+      text: "Achieved a LeetCode Contest Rating of 1600 with consistent contest participation",
       icon: <Award className="text-portfolio-blue" size={20} />,
     },
     {
       id: 5,
-      text: "Solved 35+ SQL problems",
+      text: "Competed in 25+ CodeChef contests demonstrating algorithmic expertise",
+      icon: <Award className="text-portfolio-blue" size={20} />,
+    },
+    {
+      id: 6,
+      text: "Solved 35+ SQL problems in LeetCode",
       icon: <CheckCircle className="text-portfolio-blue" size={20} />,
+    },
+    {
+      id: 7,
+      text: "Ranked among the Top 10 out of 155 students in Being zero training",
+      icon: <Award className="text-portfolio-blue" size={20} />,
     },
   ];
 
