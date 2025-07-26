@@ -7,35 +7,45 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 84% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 84% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 224.3 76.3% 48%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 84% 5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217 19% 27%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 19% 27%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 19% 27%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
+    
+    /* Portfolio specific colors */
+    --portfolio-light: 222 84% 5%;
+    --portfolio-dark: 210 40% 98%;
+    --portfolio-gray: 215 20% 65%;
+    --portfolio-blue: 217 91% 60%;
+    --portfolio-darkBlue: 217 70% 45%;
+    --portfolio-lightBlue: 217 19% 27%;
+    --portfolio-orange: 25 95% 53%;
+    --portfolio-lightGray: 217 19% 20%;
   }
 
   .dark {
@@ -86,7 +96,11 @@
 
 @layer components {
   .container-section {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-12 md:py-16;
   }
 
   .section-title {

@@ -10,7 +10,7 @@ import Contact from "@/components/sections/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-portfolio-light">
       <Navbar />
       <main>
         <Hero />

@@ -73,7 +73,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-white relative overflow-hidden">
+    <section id="contact" className="section-spacing bg-portfolio-light relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-portfolio-lightBlue rounded-full blur-3xl opacity-30 -z-10"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-portfolio-orange/10 rounded-full blur-3xl opacity-20 -z-10"></div>

@@ -42,7 +42,7 @@ const Accomplishments = () => {
   ];
 
   return (
-    <section id="accomplishments" className="py-24 bg-portfolio-light relative overflow-hidden">
+    <section id="accomplishments" className="section-spacing bg-portfolio-light relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-1/4 w-80 h-80 bg-portfolio-orange/10 rounded-full blur-3xl opacity-20 -z-10"></div>
       <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-portfolio-lightBlue rounded-full blur-3xl opacity-30 -z-10"></div>

@@ -25,20 +25,21 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
+    <section id="about" className="section-spacing bg-portfolio-light relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-portfolio-lightBlue rounded-full blur-3xl opacity-30 -z-10"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-portfolio-lightBlue rounded-full blur-3xl opacity-20 -z-10"></div>
       
       <div className="container-section">
-        <div className="flex flex-col items-center mb-16">
+        <div className="flex flex-col items-center mb-12">
           <span className="bg-portfolio-lightBlue text-portfolio-blue px-4 py-1 rounded-full text-sm font-medium mb-4">
             About Me
           </span>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          <div className="animate-fade-in space-y-8" style={{ animationDelay: "0.2s" }}>
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* Personal Bio */}
+          <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="relative">
               <div className="absolute -left-3 top-0 h-full w-1 bg-gradient-to-b from-portfolio-blue to-portfolio-orange"></div>
               <div className="ml-6">
@@ -55,6 +56,7 @@ const About = () => {
             </div>
           </div>
 
+          {/* Education */}
           <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <h3 className="text-2xl font-bold mb-8 text-portfolio-dark">Education</h3>
             <div className="space-y-6">
@@ -75,7 +77,7 @@ const About = () => {
                           {item.period && (
                             <span className="text-sm text-portfolio-blue font-medium">{item.period}</span>
                           )}
-                          <span className="text-sm font-semibold bg-portfolio-lightBlue text-portfolio-darkBlue px-3 py-1 rounded-full">
+                          <span className="text-sm font-semibold bg-portfolio-lightBlue text-portfolio-dark px-3 py-1 rounded-full">
                             {item.score}
                           </span>
                         </div>

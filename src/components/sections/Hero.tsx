@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-br from-portfolio-lightBlue via-white to-portfolio-lightBlue">
+    <section id="home" className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-br from-portfolio-light via-portfolio-light to-portfolio-lightBlue/20">
       <div className="container-section">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
