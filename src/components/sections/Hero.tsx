@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-br from-portfolio-light via-portfolio-light to-portfolio-lightBlue/20">
+    <section id="home" className="min-h-screen flex items-center pt-20 pb-12 bg-gradient-to-br from-portfolio-light via-portfolio-light to-portfolio-lightBlue/20">
       <div className="container-section">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
@@ -15,11 +15,11 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="font-bold text-4xl lg:text-5xl xl:text-6xl">
+            <h1 className="font-bold text-3xl lg:text-4xl xl:text-5xl">
               Hi, I'm <span className="bg-gradient-to-r from-portfolio-blue to-portfolio-darkBlue bg-clip-text text-transparent">KVRSWAMY</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-portfolio-gray font-light leading-relaxed max-w-lg">
+            <p className="text-lg md:text-xl text-portfolio-gray font-light leading-relaxed max-w-lg">
               A passionate developer focused on Data Structures & Algorithms and backend development with Java.
             </p>
             
@@ -55,7 +55,7 @@ const Hero = () => {
                   <Github size={20} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/swamy-kanchanapally"
+                  href="https://www.linkedin.com/in/swamy-kanchanapally-411824301/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white hover:bg-portfolio-blue hover:text-white text-portfolio-dark p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1"
@@ -72,7 +72,7 @@ const Hero = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-portfolio-blue via-portfolio-orange to-portfolio-blue rounded-full opacity-70 blur-lg animate-pulse"></div>
               <div className="relative bg-gradient-to-br from-white to-portfolio-lightBlue rounded-full overflow-hidden border-4 border-white h-64 w-64 md:h-80 md:w-80 shadow-2xl">
                 <img
-                  src={profilePlaceholder}
+                  src="/lovable-uploads/e68e8e03-87ad-4005-817a-19f55d26e6ed.png"
                   alt="KVRSWAMY"
                   className="w-full h-full object-cover"
                 />

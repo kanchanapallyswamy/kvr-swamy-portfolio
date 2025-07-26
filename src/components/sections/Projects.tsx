@@ -8,20 +8,20 @@ const Projects = () => {
     {
       id: 1,
       title: "Real-Time Median Finder",
-      description: "Developed a web-based tool to dynamically compute the median of a stream of numbers in real-time using two heaps (Min & Max Heap). Ensures O(log n) insertion and O(1) median retrieval with clean, responsive UI and interactive input.",
+      description: "Java console application to compute the running median of a dynamic stream of integers using two heaps (Max-Heap and Min-Heap). Users can input numbers interactively and view the current median in real-time.",
       icon: <Globe className="text-portfolio-blue" size={24} />,
-      technologies: ["HTML", "CSS", "JavaScript", "Heap Data Structure"],
-      color: "from-blue-500 to-cyan-400",
+      technologies: ["Java", "PriorityQueue", "Heaps", "OOP"],
+      color: "from-portfolio-blue to-portfolio-darkBlue",
       liveUrl: "http://medianfinder-kvr.streamlit.app",
       features: ["Real-time computation", "Interactive UI", "O(1) retrieval"],
     },
     {
       id: 2,
-      title: "LRU Cache Implementation",
-      description: "Developed a console-based LRU (Least Recently Used) Cache with O(1) time for get and put operations. Used HashMap + custom doubly linked list to manage item access and eviction efficiently.",
+      title: "LRU Cache Implementation", 
+      description: "Built an interactive Java console app to simulate an LRU Cache using HashMap and Doubly Linked List for O(1) get/put. Supports put, get, display, and exit commands.",
       icon: <Database className="text-portfolio-blue" size={24} />,
-      technologies: ["Java", "HashMap", "Doubly Linked List"],
-      color: "from-purple-500 to-violet-400",
+      technologies: ["Java", "HashMap", "Doubly Linked List", "OOP"],
+      color: "from-portfolio-orange to-red-500",
       liveUrl: "http://lru-cache-kvr.streamlit.app",
       features: ["O(1) operations", "Memory efficient", "Custom data structure"],
     },
@@ -46,31 +46,32 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="animate-fade-in"
+              className="animate-fade-in group"
               style={{ animationDelay: `${0.2 * project.id}s` }}
             >
-              <Card className="h-full overflow-hidden border-none shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-2 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm">
-                <div className={`h-1 w-full bg-gradient-to-r ${project.color}`}></div>
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
-                    <div className="p-4 bg-gradient-to-br from-portfolio-lightBlue to-portfolio-lightBlue/50 rounded-xl mr-4 group-hover:from-portfolio-blue/20 group-hover:to-portfolio-blue/10 transition-all duration-300">
+              <Card className="h-full overflow-hidden border border-portfolio-lightGray/30 shadow-2xl hover:shadow-portfolio-blue/20 transition-all duration-500 hover:-translate-y-3 bg-gradient-to-br from-card via-card to-portfolio-lightBlue/5 backdrop-blur-sm hover:border-portfolio-blue/50">
+                <div className={`h-2 w-full bg-gradient-to-r ${project.color} shadow-lg`}></div>
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4 mb-5">
+                    <div className="p-3 bg-gradient-to-br from-portfolio-blue/20 to-portfolio-blue/10 rounded-xl group-hover:from-portfolio-blue/30 group-hover:to-portfolio-blue/20 transition-all duration-300 border border-portfolio-blue/20">
                       {project.icon}
                     </div>
-                    <h3 className="text-2xl font-bold text-portfolio-dark group-hover:text-portfolio-blue transition-colors duration-300">{project.title}</h3>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-portfolio-dark group-hover:text-portfolio-blue transition-colors duration-300 mb-2">{project.title}</h3>
+                      <p className="text-sm text-portfolio-gray leading-relaxed">{project.description}</p>
+                    </div>
                   </div>
                   
-                  <p className="text-portfolio-gray mb-6 leading-relaxed">{project.description}</p>
-                  
                   {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-portfolio-dark mb-3">Key Features:</h4>
-                    <div className="flex flex-wrap gap-2">
+                  <div className="mb-4">
+                    <h4 className="text-xs font-semibold text-portfolio-blue mb-2 uppercase tracking-wide">Key Features</h4>
+                    <div className="flex flex-wrap gap-1.5">
                       {project.features.map((feature, index) => (
-                        <span key={index} className="text-xs bg-portfolio-blue/10 text-portfolio-blue px-3 py-1 rounded-full border border-portfolio-blue/20">
+                        <span key={index} className="text-xs bg-portfolio-blue/10 text-portfolio-blue px-2.5 py-1 rounded-full border border-portfolio-blue/20 hover:bg-portfolio-blue/20 transition-colors">
                           {feature}
                         </span>
                       ))}
@@ -79,25 +80,25 @@ const Projects = () => {
                   
                   {/* Technologies */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-portfolio-dark mb-3">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
+                    <h4 className="text-xs font-semibold text-portfolio-orange mb-2 uppercase tracking-wide">Tech Stack</h4>
+                    <div className="flex flex-wrap gap-1.5">
                       {project.technologies.map((tech, index) => (
-                        <span key={index} className="skill-badge">
+                        <span key={index} className="text-xs bg-portfolio-orange/10 text-portfolio-orange px-2.5 py-1 rounded-full border border-portfolio-orange/20 hover:bg-portfolio-orange/20 transition-colors">
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
                   
-                  {/* Action Buttons */}
-                  <div className="flex gap-3 pt-4 border-t border-portfolio-lightGray">
+                  {/* Action Button */}
+                  <div className="pt-4 border-t border-portfolio-lightGray/30">
                     <Button 
                       asChild
-                      className="flex-1 bg-gradient-to-r from-portfolio-blue to-portfolio-darkBlue hover:from-portfolio-darkBlue hover:to-portfolio-blue text-white border-none shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-portfolio-blue to-portfolio-darkBlue hover:from-portfolio-orange hover:to-red-500 text-white border-none shadow-lg hover:shadow-xl hover:shadow-portfolio-blue/30 hover:-translate-y-1 transition-all duration-300 group/btn"
                     >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} className="mr-2" />
-                        Live Demo
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                        <ExternalLink size={14} className="mr-2 group-hover/btn:rotate-12 transition-transform" />
+                        <span className="font-medium">Live Demo</span>
                       </a>
                     </Button>
                   </div>

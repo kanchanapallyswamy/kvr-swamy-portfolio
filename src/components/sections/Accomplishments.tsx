@@ -16,7 +16,7 @@ const Accomplishments = () => {
     },
     {
       id: 3,
-      text: "Completed 30+ LeetCode contests demonstrating algorithmic expertise",
+      text: "Completed 50+ LeetCode contests demonstrating algorithmic expertise",
       icon: <Award className="text-portfolio-blue" size={20} />,
     },
     {
@@ -71,7 +71,7 @@ const Accomplishments = () => {
                     <div className="p-2 bg-portfolio-lightBlue rounded-lg mt-1">
                       {item.icon}
                     </div>
-                    <span className="text-lg">{item.text}</span>
+                    <span className="text-sm text-portfolio-gray">{item.text}</span>
                   </div>
                 ))}
               </div>

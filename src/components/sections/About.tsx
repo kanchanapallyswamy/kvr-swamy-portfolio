@@ -44,11 +44,9 @@ const About = () => {
               <div className="absolute -left-3 top-0 h-full w-1 bg-gradient-to-b from-portfolio-blue to-portfolio-orange"></div>
               <div className="ml-6">
                 <h3 className="text-2xl font-bold mb-6 text-portfolio-dark">Personal Bio</h3>
-                <p className="text-lg text-portfolio-gray mb-6 leading-relaxed">
+                <p className="text-base text-portfolio-gray leading-relaxed">
                   Dynamic Software Developer with expertise in Java, Python, and C, specializing in Data Structures & Algorithms (DSA). 
-                  Proven track record of solving 700+ problems on LeetCode and participating in 35+ coding contests.
-                </p>
-                <p className="text-lg text-portfolio-gray leading-relaxed">
+                  Proven track record of solving 700+ problems on LeetCode and participating in 50+ coding contests.
                   Passionate about building high-performance applications, optimizing system efficiency, and leveraging algorithmic expertise to solve complex problems. 
                   Achieved a LeetCode Contest Rating of 1600 with consistent contest participation.
                 </p>
