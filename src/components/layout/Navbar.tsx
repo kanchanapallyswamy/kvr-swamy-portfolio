@@ -66,7 +66,7 @@ const Navbar = () => {
     <header 
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/80 backdrop-blur-lg shadow-md py-3' 
+          ? 'bg-black/90 backdrop-blur-lg shadow-md py-3' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -106,7 +106,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-lg absolute top-full left-0 w-full py-4 px-6 shadow-lg border-t animate-fade-in">
+          <div className="md:hidden bg-black/95 backdrop-blur-lg absolute top-full left-0 w-full py-4 px-6 shadow-lg border-t border-gray-800 animate-fade-in">
             {navLinks.map((link) => (
               <a
                 key={link.name}

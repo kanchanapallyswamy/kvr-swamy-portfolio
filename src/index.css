@@ -132,7 +132,7 @@
   }
 
   .nav-link {
-    @apply relative text-portfolio-dark hover:text-portfolio-blue transition-colors duration-300 font-medium;
+    @apply relative text-white hover:text-portfolio-blue transition-colors duration-300 font-bold;
   }
 
   .nav-link.active {
@@ -149,6 +149,6 @@
   }
 
   .skill-badge {
-    @apply bg-portfolio-lightBlue text-portfolio-blue rounded-full px-4 py-1 text-sm font-medium;
+    @apply bg-portfolio-blue/20 text-portfolio-blue rounded-full px-4 py-1 text-sm font-medium;
   }
 }

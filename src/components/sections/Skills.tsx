@@ -48,17 +48,17 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-spacing bg-portfolio-light relative overflow-hidden">
+    <section id="skills" className="section-spacing bg-black relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-1/4 w-72 h-72 bg-portfolio-orange/10 rounded-full blur-3xl opacity-30 -z-10"></div>
       <div className="absolute bottom-1/4 right-0 w-64 h-64 bg-portfolio-lightBlue rounded-full blur-3xl opacity-30 -z-10"></div>
       
       <div className="container-section">
         <div className="flex flex-col items-center mb-16">
-          <span className="bg-portfolio-lightBlue text-portfolio-blue px-4 py-1 rounded-full text-sm font-medium mb-4">
+          <span className="bg-portfolio-blue/20 text-portfolio-blue px-4 py-1 rounded-full text-sm font-medium mb-4">
             My Expertise
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-portfolio-dark to-portfolio-blue/80 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-portfolio-blue bg-clip-text text-transparent">
             Skills & Knowledge
           </h2>
         </div>
@@ -67,15 +67,15 @@ const Skills = () => {
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {skillCategories.map((category, index) => (
-                <Card 
-                  key={index} 
-                  className="border-none shadow-lg animate-fade-in"
-                  style={{ animationDelay: `${0.2 * index}s` }}
-                >
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-portfolio-blue mb-4 border-b pb-2">
-                      {category.title}
-                    </h3>
+                  <Card 
+                    key={index} 
+                    className="border border-gray-800 bg-gray-900 shadow-lg animate-fade-in"
+                    style={{ animationDelay: `${0.2 * index}s` }}
+                  >
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-semibold text-white mb-4 border-b border-gray-700 pb-2">
+                        {category.title}
+                      </h3>
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill, idx) => (
                         <span key={idx} className="skill-badge">
@@ -89,9 +89,9 @@ const Skills = () => {
             </div>
 
             <div className="mt-8">
-              <Card className="border-none shadow-lg">
+              <Card className="border border-gray-800 bg-gray-900 shadow-lg">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-portfolio-dark mb-4 border-b pb-2">
+                  <h3 className="text-lg font-semibold text-white mb-4 border-b border-gray-700 pb-2">
                     Coding Profiles
                   </h3>
                   <div className="flex flex-col space-y-4">
@@ -101,11 +101,11 @@ const Skills = () => {
                         href={profile.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center p-4 rounded-lg border border-portfolio-lightGray hover:border-portfolio-blue transition-all hover:shadow-md bg-white"
+                        className="flex items-center p-4 rounded-lg border border-gray-700 hover:border-portfolio-blue transition-all hover:shadow-md bg-gray-800"
                       >
                         <div className="flex-grow">
-                          <h4 className="font-medium text-portfolio-dark">{profile.platform}</h4>
-                          <p className="text-portfolio-gray">{profile.username}</p>
+                          <h4 className="font-medium text-white">{profile.platform}</h4>
+                          <p className="text-gray-400">{profile.username}</p>
                         </div>
                         <span className="text-sm font-medium text-white bg-portfolio-blue px-3 py-1 rounded-full hover:bg-portfolio-darkBlue transition-colors">
                           Visit Profile
@@ -119,37 +119,60 @@ const Skills = () => {
           </div>
 
           <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Card className="border-none shadow-lg overflow-hidden h-full">
+            <Card className="border border-gray-800 shadow-lg overflow-hidden h-full">
               <div className="h-2 w-full bg-gradient-to-r from-portfolio-blue to-portfolio-orange"></div>
-              <CardContent className="p-8 bg-gradient-to-br from-portfolio-darkBlue to-portfolio-blue text-white h-full">
-                <h3 className="text-2xl font-bold mb-8">DSA Enthusiast</h3>
-                <p className="mb-10 text-gray-100 leading-relaxed">
+              <CardContent className="p-8 bg-gradient-to-br from-gray-900 to-black text-white h-full">
+                <h3 className="text-2xl font-bold mb-6">DSA Enthusiast</h3>
+                <p className="mb-8 text-gray-300 leading-relaxed">
                   I'm passionate about Data Structures and Algorithms, regularly practicing and improving my problem-solving skills through competitive programming.
                 </p>
                 
-                <div className="space-y-8">
+                {/* Live LeetCode Stats */}
+                <div className="mb-8 p-4 rounded-lg bg-black/50 border border-gray-700">
+                  <h4 className="text-lg font-semibold mb-4 text-portfolio-blue">Live LeetCode Stats</h4>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-400">700+</div>
+                      <div className="text-gray-400">Problems Solved</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-blue-400">1600</div>
+                      <div className="text-gray-400">Contest Rating</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-orange-400">53</div>
+                      <div className="text-gray-400">Max Streak</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-purple-400">50+</div>
+                      <div className="text-gray-400">Contests</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
                   {codingStats.map((stat, idx) => (
                     <div key={idx} className="space-y-2">
                       <div className="flex justify-between mb-1">
-                        <span className="font-medium">{stat.name}</span>
-                        <span className="font-bold">{stat.value}+</span>
+                        <span className="font-medium text-gray-300">{stat.name}</span>
+                        <span className="font-bold text-white">{stat.value}+</span>
                       </div>
-                      <Progress value={stat.percentage} className="h-2 bg-white/20" indicatorColor="bg-portfolio-orange" />
+                      <Progress value={stat.percentage} className="h-2 bg-gray-700" indicatorColor="bg-portfolio-orange" />
                     </div>
                   ))}
                 </div>
                 
-                <div className="mt-10 pt-6 border-t border-white/20">
+                <div className="mt-8 pt-6 border-t border-gray-700">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm text-gray-200">Want to see more?</p>
-                      <h4 className="font-semibold">Check my coding profiles</h4>
+                      <p className="text-sm text-gray-400">Want to see more?</p>
+                      <h4 className="font-semibold text-white">Check my coding profiles</h4>
                     </div>
                     <a 
                       href="https://leetcode.com/u/kvr_swamy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white text-portfolio-blue px-4 py-2 rounded-lg font-medium hover:bg-portfolio-orange hover:text-white transition-colors"
+                      className="bg-portfolio-blue text-white px-4 py-2 rounded-lg font-medium hover:bg-portfolio-orange transition-colors"
                     >
                       Visit LeetCode
                     </a>
