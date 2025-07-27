@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-12 bg-gradient-to-br from-portfolio-light via-portfolio-light to-portfolio-lightBlue/20">
+    <section id="home" className="min-h-screen flex items-center pt-16 pb-8 bg-black">
       <div className="container-section">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 space-y-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
@@ -69,20 +69,13 @@ const Hero = () => {
           
           <div className="order-1 md:order-2 flex justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-portfolio-blue via-portfolio-orange to-portfolio-blue rounded-full opacity-70 blur-lg animate-pulse"></div>
-              <div className="relative bg-gradient-to-br from-white to-portfolio-lightBlue rounded-full overflow-hidden border-4 border-white h-64 w-64 md:h-80 md:w-80 shadow-2xl">
+              <div className="absolute -inset-2 bg-gradient-to-r from-portfolio-blue via-portfolio-orange to-portfolio-blue rounded-full opacity-60 blur-xl animate-pulse"></div>
+              <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-full overflow-hidden border-4 border-portfolio-blue h-80 w-80 md:h-96 md:w-96 shadow-2xl">
                 <img
                   src="/lovable-uploads/e68e8e03-87ad-4005-817a-19f55d26e6ed.png"
                   alt="KVRSWAMY"
                   className="w-full h-full object-cover"
                 />
-              </div>
-              
-              <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-full shadow-lg">
-                 <div className="bg-portfolio-orange h-16 w-16 rounded-full flex items-center justify-center text-white font-bold text-lg animate-pulse">
-                   700+
-                   <span className="text-xs absolute bottom-2.5">Problems</span>
-                 </div>
               </div>
             </div>
           </div>

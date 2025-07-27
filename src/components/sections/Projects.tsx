@@ -1,4 +1,3 @@
-
 import { Code, Globe, Database, ExternalLink, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,7 @@ const Projects = () => {
       technologies: ["Java", "PriorityQueue", "Heaps", "OOP"],
       color: "from-portfolio-blue to-portfolio-darkBlue",
       liveUrl: "http://medianfinder-kvr.streamlit.app",
+      githubUrl: "https://github.com/kanchanapallyswamy/RUNNING-MEDIAN",
       features: ["Real-time computation", "Interactive UI", "O(1) retrieval"],
     },
     {
@@ -23,25 +23,26 @@ const Projects = () => {
       technologies: ["Java", "HashMap", "Doubly Linked List", "OOP"],
       color: "from-portfolio-orange to-red-500",
       liveUrl: "http://lru-cache-kvr.streamlit.app",
+      githubUrl: "https://github.com/kanchanapallyswamy/LRU-CACHE",
       features: ["O(1) operations", "Memory efficient", "Custom data structure"],
     },
   ];
 
   return (
-    <section id="projects" className="section-spacing bg-portfolio-light relative overflow-hidden">
+    <section id="projects" className="section-spacing bg-black relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-portfolio-lightBlue rounded-full blur-3xl opacity-30 -z-10"></div>
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-portfolio-blue/10 rounded-full blur-3xl opacity-30 -z-10"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-portfolio-orange/10 rounded-full blur-3xl opacity-30 -z-10"></div>
       
       <div className="container-section">
         <div className="flex flex-col items-center mb-12">
-          <span className="bg-portfolio-lightBlue text-portfolio-blue px-4 py-1 rounded-full text-sm font-medium mb-4">
+          <span className="bg-portfolio-blue/20 text-portfolio-blue px-4 py-1 rounded-full text-sm font-medium mb-4 border border-portfolio-blue/30">
             My Work
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-portfolio-dark to-portfolio-blue bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-portfolio-blue bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-center text-portfolio-gray max-w-2xl mx-auto mt-6 text-lg">
+          <p className="text-center text-gray-300 max-w-2xl mx-auto mt-6 text-lg">
             Here are some of the projects I've built, focusing on algorithm implementation and system efficiency.
           </p>
         </div>
@@ -53,7 +54,7 @@ const Projects = () => {
               className="animate-fade-in group"
               style={{ animationDelay: `${0.2 * project.id}s` }}
             >
-              <Card className="h-full overflow-hidden border border-portfolio-lightGray/30 shadow-2xl hover:shadow-portfolio-blue/20 transition-all duration-500 hover:-translate-y-3 bg-gradient-to-br from-card via-card to-portfolio-lightBlue/5 backdrop-blur-sm hover:border-portfolio-blue/50">
+              <Card className="h-full overflow-hidden border border-gray-800 shadow-2xl hover:shadow-portfolio-blue/20 transition-all duration-500 hover:-translate-y-3 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 backdrop-blur-sm hover:border-portfolio-blue/50">
                 <div className={`h-2 w-full bg-gradient-to-r ${project.color} shadow-lg`}></div>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4 mb-5">
@@ -61,8 +62,8 @@ const Projects = () => {
                       {project.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-portfolio-dark group-hover:text-portfolio-blue transition-colors duration-300 mb-2">{project.title}</h3>
-                      <p className="text-sm text-portfolio-gray leading-relaxed">{project.description}</p>
+                      <h3 className="text-xl font-bold text-white group-hover:text-portfolio-blue transition-colors duration-300 mb-2">{project.title}</h3>
+                      <p className="text-sm text-gray-300 leading-relaxed">{project.description}</p>
                     </div>
                   </div>
                   
@@ -90,15 +91,25 @@ const Projects = () => {
                     </div>
                   </div>
                   
-                  {/* Action Button */}
-                  <div className="pt-4 border-t border-portfolio-lightGray/30">
+                  {/* Action Buttons */}
+                  <div className="pt-4 border-t border-gray-700 flex gap-3">
                     <Button 
                       asChild
-                      className="w-full bg-gradient-to-r from-portfolio-blue to-portfolio-darkBlue hover:from-portfolio-orange hover:to-red-500 text-white border-none shadow-lg hover:shadow-xl hover:shadow-portfolio-blue/30 hover:-translate-y-1 transition-all duration-300 group/btn"
+                      className="flex-1 bg-gradient-to-r from-portfolio-blue to-portfolio-darkBlue hover:from-portfolio-orange hover:to-red-500 text-white border-none shadow-lg hover:shadow-xl hover:shadow-portfolio-blue/30 hover:-translate-y-1 transition-all duration-300 group/btn"
                     >
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                         <ExternalLink size={14} className="mr-2 group-hover/btn:rotate-12 transition-transform" />
-                        <span className="font-medium">Live Demo</span>
+                        <span className="font-medium text-sm">Live Demo</span>
+                      </a>
+                    </Button>
+                    <Button 
+                      asChild
+                      variant="outline"
+                      className="flex-1 border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white shadow-lg hover:shadow-xl hover:shadow-portfolio-blue/30 hover:-translate-y-1 transition-all duration-300 group/btn bg-transparent"
+                    >
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                        <Github size={14} className="mr-2 group-hover/btn:rotate-12 transition-transform" />
+                        <span className="font-medium text-sm">Code</span>
                       </a>
                     </Button>
                   </div>

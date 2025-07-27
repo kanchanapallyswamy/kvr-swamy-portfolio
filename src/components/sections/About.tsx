@@ -25,10 +25,10 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-spacing bg-portfolio-light relative overflow-hidden">
+    <section id="about" className="section-spacing bg-black relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-portfolio-lightBlue rounded-full blur-3xl opacity-30 -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-portfolio-lightBlue rounded-full blur-3xl opacity-20 -z-10"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-portfolio-blue/10 rounded-full blur-3xl opacity-30 -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-portfolio-orange/10 rounded-full blur-3xl opacity-20 -z-10"></div>
       
       <div className="container-section">
         <div className="flex flex-col items-center mb-12">
@@ -43,8 +43,8 @@ const About = () => {
             <div className="relative">
               <div className="absolute -left-3 top-0 h-full w-1 bg-gradient-to-b from-portfolio-blue to-portfolio-orange"></div>
               <div className="ml-6">
-                <h3 className="text-2xl font-bold mb-6 text-portfolio-dark">Personal Bio</h3>
-                <p className="text-base text-portfolio-gray leading-relaxed">
+                <h3 className="text-2xl font-bold mb-6 text-white">Personal Bio</h3>
+                <p className="text-base text-gray-300 leading-relaxed">
                   Dynamic Software Developer with expertise in Java, Python, and C, specializing in Data Structures & Algorithms (DSA). 
                   Proven track record of solving 700+ problems on LeetCode and participating in 50+ coding contests.
                   Passionate about building high-performance applications, optimizing system efficiency, and leveraging algorithmic expertise to solve complex problems. 
@@ -56,7 +56,7 @@ const About = () => {
 
           {/* Education */}
           <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <h3 className="text-2xl font-bold mb-8 text-portfolio-dark">Education</h3>
+            <h3 className="text-2xl font-bold mb-8 text-white">🎓 Education</h3>
             <div className="space-y-6">
               {education.map((item, index) => (
                 <Card key={index} className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 group">
@@ -67,15 +67,15 @@ const About = () => {
                         <Briefcase className="text-portfolio-blue" size={20} />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-lg text-portfolio-dark mb-1">
+                        <h4 className="font-bold text-lg text-white mb-1">
                           {item.degree}
                         </h4>
-                        <p className="text-portfolio-gray mb-3">{item.institution}</p>
+                        <p className="text-gray-300 mb-3">{item.institution}</p>
                         <div className="flex flex-wrap items-center justify-between mt-2">
                           {item.period && (
                             <span className="text-sm text-portfolio-blue font-medium">{item.period}</span>
                           )}
-                          <span className="text-sm font-semibold bg-portfolio-lightBlue text-portfolio-dark px-3 py-1 rounded-full">
+                          <span className="text-sm font-semibold bg-portfolio-blue/20 text-portfolio-blue px-3 py-1 rounded-full">
                             {item.score}
                           </span>
                         </div>

@@ -73,21 +73,26 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-spacing bg-portfolio-light relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-portfolio-lightBlue rounded-full blur-3xl opacity-30 -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-portfolio-orange/10 rounded-full blur-3xl opacity-20 -z-10"></div>
+    <section id="contact" className="section-spacing bg-black relative overflow-hidden">
+      {/* Enhanced Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black -z-20"></div>
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-portfolio-blue/20 rounded-full blur-3xl opacity-30 -z-10 animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-portfolio-orange/20 rounded-full blur-3xl opacity-30 -z-10 animate-pulse"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-portfolio-blue/5 to-transparent -z-10"></div>
       
       <div className="container-section">
         <div className="flex flex-col items-center mb-16">
-          <span className="bg-portfolio-lightBlue text-portfolio-blue px-4 py-1 rounded-full text-sm font-medium mb-4">
-            Contact Me
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-portfolio-dark to-portfolio-blue/80 bg-clip-text text-transparent">
+          <div className="relative">
+            <span className="bg-gradient-to-r from-portfolio-blue/20 to-portfolio-orange/20 text-portfolio-blue px-6 py-2 rounded-full text-sm font-medium mb-6 inline-block border border-portfolio-blue/30 backdrop-blur-sm">
+              ✨ Contact Me
+            </span>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-portfolio-blue to-portfolio-orange bg-clip-text text-transparent mb-4">
             Get In Touch
           </h2>
-          <p className="text-center text-portfolio-gray max-w-2xl mx-auto mt-6 text-lg">
-            Feel free to reach out for opportunities, collaborations, or just to say hello!
+          <div className="w-20 h-1 bg-gradient-to-r from-portfolio-blue to-portfolio-orange rounded-full mb-6"></div>
+          <p className="text-center text-gray-300 max-w-3xl mx-auto text-xl leading-relaxed">
+            Ready to turn ideas into reality? Let's connect and discuss how we can collaborate on your next innovative project.
           </p>
         </div>
         
@@ -102,12 +107,12 @@ const Contact = () => {
                         {item.icon}
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg text-portfolio-dark mb-1">{item.title}</h3>
+                        <h3 className="font-semibold text-lg text-white mb-1">{item.title}</h3>
                         <a
                           href={item.link}
                           target={item.id > 2 ? "_blank" : undefined}
                           rel={item.id > 2 ? "noopener noreferrer" : undefined}
-                          className="text-portfolio-gray hover:text-portfolio-blue transition-colors"
+                          className="text-gray-300 hover:text-portfolio-blue transition-colors"
                         >
                           {item.value}
                         </a>
@@ -126,7 +131,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit}>
                   <div className="space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-portfolio-dark mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                         Your Name
                       </label>
                       <input
@@ -141,7 +146,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-portfolio-dark mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                         Your Email
                       </label>
                       <input
@@ -156,7 +161,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-portfolio-dark mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                         Message
                       </label>
                       <textarea

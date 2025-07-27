@@ -100,7 +100,7 @@
   }
 
   .section-spacing {
-    @apply py-8 md:py-10;
+    @apply py-4 md:py-6;
   }
 
   .section-title {
