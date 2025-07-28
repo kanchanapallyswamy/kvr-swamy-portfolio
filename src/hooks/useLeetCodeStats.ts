@@ -44,16 +44,16 @@ export const useLeetCodeStats = (username: string): LeetCodeStats => {
       try {
         setStats(prev => ({ ...prev, isLoading: true, error: null }));
         
-        // Using alfa-leetcode-api
-        const response = await fetch(`https://alfa-leetcode-api.onrender.com/${username}`);
+        // Fetch solved problems stats
+        const solvedResponse = await fetch(`https://alfa-leetcode-api.onrender.com/${username}/solved`);
         
-        if (!response.ok) {
+        if (!solvedResponse.ok) {
           throw new Error('Failed to fetch LeetCode stats');
         }
         
-        const data = await response.json();
+        const solvedData = await solvedResponse.json();
         
-        // Also fetch contest ranking if available
+        // Also fetch contest data
         const contestResponse = await fetch(`https://alfa-leetcode-api.onrender.com/${username}/contest`);
         let contestData = null;
         if (contestResponse.ok) {
@@ -62,20 +62,20 @@ export const useLeetCodeStats = (username: string): LeetCodeStats => {
 
         setStats(prev => ({
           ...prev,
-          totalSolved: data.totalSolved || 0,
-          totalSubmissions: data.totalSubmissions || 0,
-          totalQuestions: data.totalQuestions || 0,
-          easySolved: data.easySolved || 0,
-          easyTotal: data.easyTotal || 0,
-          mediumSolved: data.mediumSolved || 0,
-          mediumTotal: data.mediumTotal || 0,
-          hardSolved: data.hardSolved || 0,
-          hardTotal: data.hardTotal || 0,
-          acceptanceRate: data.acceptanceRate || 0,
-          ranking: data.ranking || 0,
-          contributionPoints: data.contributionPoints || 0,
-          reputation: data.reputation || 0,
-          recentSubmissions: data.recentSubmissions || [],
+          totalSolved: solvedData.solvedProblem || 0,
+          totalSubmissions: solvedData.totalSubmissions || 0,
+          totalQuestions: solvedData.totalQuestions || 0,
+          easySolved: solvedData.easySolved || 0,
+          easyTotal: solvedData.easyTotal || 0,
+          mediumSolved: solvedData.mediumSolved || 0,
+          mediumTotal: solvedData.mediumTotal || 0,
+          hardSolved: solvedData.hardSolved || 0,
+          hardTotal: solvedData.hardTotal || 0,
+          acceptanceRate: solvedData.acceptanceRate || 0,
+          ranking: solvedData.ranking || 0,
+          contributionPoints: contestData?.contestAttend || 0,
+          reputation: contestData?.contestRating || 0,
+          recentSubmissions: solvedData.recentSubmissions || [],
           isLoading: false,
         }));
         
