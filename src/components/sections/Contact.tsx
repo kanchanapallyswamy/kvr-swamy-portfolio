@@ -60,8 +60,8 @@ const Contact = () => {
       id: 3,
       icon: <Linkedin className="text-portfolio-blue" size={24} />,
       title: "LinkedIn",
-      value: "linkedin.com/in/swamy-kanchanapally",
-      link: "https://linkedin.com/in/swamy-kanchanapally",
+      value: "linkedin.com/in/swamy-kanchanapally-411824301",
+      link: "https://www.linkedin.com/in/swamy-kanchanapally-411824301/",
     },
     {
       id: 4,
@@ -139,7 +139,7 @@ const Contact = () => {
                         id="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-portfolio-lightGray focus:outline-none focus:ring-2 focus:ring-portfolio-blue/50 focus:border-transparent"
+                        className="w-full px-4 py-3 rounded-lg border border-portfolio-lightGray bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-portfolio-blue/50 focus:border-transparent"
                         placeholder="Enter your name"
                         required
                       />
@@ -154,7 +154,7 @@ const Contact = () => {
                         id="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-portfolio-lightGray focus:outline-none focus:ring-2 focus:ring-portfolio-blue/50 focus:border-transparent"
+                        className="w-full px-4 py-3 rounded-lg border border-portfolio-lightGray bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-portfolio-blue/50 focus:border-transparent"
                         placeholder="Enter your email"
                         required
                       />
@@ -169,7 +169,7 @@ const Contact = () => {
                         rows={5}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-portfolio-lightGray focus:outline-none focus:ring-2 focus:ring-portfolio-blue/50 focus:border-transparent"
+                        className="w-full px-4 py-3 rounded-lg border border-portfolio-lightGray bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-portfolio-blue/50 focus:border-transparent resize-none"
                         placeholder="Type your message here..."
                         required
                       ></textarea>

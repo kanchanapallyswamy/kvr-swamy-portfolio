@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-portfolio-darkBlue text-white py-16 relative overflow-hidden">
+    <footer className="bg-black text-white py-16 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-portfolio-blue/10 rounded-full blur-3xl opacity-10"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-portfolio-blue/5 rounded-full blur-3xl opacity-10"></div>
@@ -30,7 +30,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/swamy-kanchanapally"
+                href="https://www.linkedin.com/in/swamy-kanchanapally-411824301/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/5 hover:bg-white/10 text-white p-3 rounded-full transition-colors backdrop-blur-sm"
