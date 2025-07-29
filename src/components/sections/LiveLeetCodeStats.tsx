@@ -10,16 +10,10 @@ const LiveLeetCodeStats = ({ username }: LiveLeetCodeStatsProps) => {
         LeetCode Stats (Auto-updating)
       </h3>
       
-      <div className="w-full space-y-4">
+      <div className="w-full">
         <img 
-          src={`https://leetcard.jacoblin.cool/${username}?theme=dark&font=baloo&ext=activity`}
-          alt="LeetCode Stats"
-          className="w-full h-auto rounded-lg shadow-lg"
-          loading="lazy"
-        />
-        <img 
-          src={`https://leetcard.jacoblin.cool/${username}?theme=dark&font=baloo&ext=heatmap`}
-          alt="LeetCode Heatmap"
+          src={`https://leetcard.jacoblin.cool/${username}?theme=dark&font=baloo&ext=activity&ext=heatmap`}
+          alt="LeetCode Stats with Heatmap"
           className="w-full h-auto rounded-lg shadow-lg"
           loading="lazy"
         />
