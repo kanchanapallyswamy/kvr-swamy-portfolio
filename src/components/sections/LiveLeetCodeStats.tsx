@@ -10,11 +10,11 @@ const LiveLeetCodeStats = ({ username }: LiveLeetCodeStatsProps) => {
         LeetCode Stats (Auto-updating)
       </h3>
       
-      <div className="flex justify-center">
+      <div className="w-full">
         <img 
           src={`https://leetcard.jacoblin.cool/${username}?theme=dark&font=baloo&ext=heatmap`}
           alt="LeetCode Stats"
-          className="rounded-lg shadow-lg max-w-full h-auto"
+          className="w-full h-auto rounded-lg shadow-lg"
           loading="lazy"
         />
       </div>
