@@ -12,7 +12,7 @@ const LiveLeetCodeStats = ({ username }: LiveLeetCodeStatsProps) => {
       
       <div className="w-full">
         <img 
-          src={`https://leetcard.jacoblin.cool/${username}?theme=dark&font=baloo&ext=heatmap`}
+          src={`https://leetcard.jacoblin.cool/${username}?theme=dark&font=baloo&ext=activity`}
           alt="LeetCode Stats"
           className="w-full h-auto rounded-lg shadow-lg"
           loading="lazy"
