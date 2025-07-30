@@ -39,7 +39,7 @@ const Hero = () => {
                 className="bg-portfolio-orange hover:bg-portfolio-darkBlue transition-all duration-300 shadow-lg hover:shadow-portfolio-blue/20 hover:-translate-y-1"
                 asChild
               >
-                <a href="https://drive.google.com/uc?export=download&id=1KMeUav07FP31BLN3ZoQNnGCLOxPc1obj" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/uc?export=download&id=1wcxB1oEub-YA9MJq5utmNdw1Tbqwg9AX" target="_blank" rel="noopener noreferrer">
                   <Download size={18} className="mr-1" /> Download Resume
                 </a>
               </Button>
