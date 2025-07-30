@@ -45,11 +45,7 @@ const About = () => {
               <div className="ml-6">
                 <h3 className="text-2xl font-bold mb-6 text-white">Personal Bio</h3>
                 <p className="text-base text-gray-300 leading-relaxed">
-                  Dynamic Software Developer with expertise in Java specializing in Data Structures &
-                  Algorithms (DSA). Proven track record of solving 700+ problems on LeetCode and
-                  participating in 50+ coding contests. Passionate about building high-performance
-                  applications, optimizing system efficiency, and leveraging algorithmic expertise to solve
-                  complex problems.
+                  I'm a software developer driven by a passion for problem-solving and algorithmic thinking. With over 700+ problems solved on LeetCode and active participation in contests, I've built a strong foundation in data structures and Java programming. I enjoy turning logic into clean, efficient code and believe in growing consistently—one challenge at a time. Whether it's coding, learning, or building, I'm always focused on improving and staying curious.
                 </p>
               </div>
             </div>
